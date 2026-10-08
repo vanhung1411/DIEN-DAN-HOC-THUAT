@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>EduHub - Kết quả tìm kiếm toàn hệ thống</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "primary": "#3525cd", "surface-container": "#eaedff", "outline": "#777587", "primary-container": "#4f46e5",
+            "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "background": "#faf8ff", "surface": "#faf8ff"
+          },
+          "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          "fontFamily": { "body-md": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "title-lg": ["Be Vietnam Pro"] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto">
+    <div class="h-16 px-space-lg flex items-center gap-space-sm flex-shrink-0">
+      <a href="index.html" class="flex items-center gap-space-sm">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">school</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-title-lg text-title-lg text-on-surface tracking-tight leading-none">EduHub</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Nền tảng học thuật số</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="flex-1 px-space-md py-space-sm space-y-space-lg">
+      <nav class="space-y-1">
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="index.html">
+          <span class="material-symbols-outlined text-[20px]">forum</span>
+          <span>Trang chủ</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all" href="documents.html">
+          <span class="material-symbols-outlined text-[20px]">auto_stories</span>
+          <span>Thư viện Tài liệu</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="pl-72">
+    <header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md">
+      <div class="flex-1 max-w-xl">
+        <form action="search.html" method="GET" class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+          <input class="w-full h-10 pl-10 pr-12 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" name="q" placeholder="Tìm tài liệu, giáo trình, bài thảo luận..." type="text" id="searchInput"/>
+        </form>
+      </div>
+      <div class="flex items-center gap-space-sm">
+        <button class="btn-notifications relative w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button" title="Thông báo">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="notification-badge hidden absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-error text-white font-bold text-[10px] rounded-full flex items-center justify-center ring-2 ring-surface shadow-sm"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="relative pt-16 min-h-screen bg-background w-full px-space-lg pb-space-xl">
+      <div class="max-w-[1360px] mx-auto w-full pt-4 pb-12">
+        <h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Kết quả tìm kiếm</h1>
+        <p class="font-body-md text-on-surface-variant mb-6">Tìm thấy 42 kết quả phù hợp cho từ khóa học thuật của bạn.</p>
+
+        <div class="space-y-4">
+          <div class="p-5 bg-surface-container-lowest rounded-xl shadow-sm space-y-2">
+            <span class="px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-sm">Bài thảo luận</span>
+            <a href="post-detail.html"><h3 class="font-title-lg text-on-surface hover:text-primary">Lỗi Concurrent State Mutation trong React Redux Toolkit</h3></a>
+            <p class="font-body-md text-on-surface-variant">Thảo luận về Optimistic Updates và Redux Toolkit Query...</p>
+          </div>
+
+          <div class="p-5 bg-surface-container-lowest rounded-xl shadow-sm space-y-2">
+            <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded font-label-sm">Tài liệu</span>
+            <a href="document-detail.html"><h3 class="font-title-lg text-on-surface hover:text-secondary">Tuyển tập 50 Đề thi Cấu trúc Dữ liệu &amp; Giải thuật 2024</h3></a>
+            <p class="font-body-md text-on-surface-variant">File PDF 128 trang đề thi có đáp án môn Cấu trúc dữ liệu...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q') || urlParams.get('topic') || urlParams.get('tag');
+    if (query) {
+      document.getElementById('searchInput').value = query;
+    }
+  </script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/documents.js"></script>
+  <script src="assets/js/friends.js"></script>
+  <script src="assets/js/moderation.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

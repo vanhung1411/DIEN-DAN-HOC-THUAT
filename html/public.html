@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>EduHub - Cổng thông tin Học thuật Công khai (Guest View)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "primary": "#3525cd", "surface-container": "#eaedff", "outline": "#777587", "primary-container": "#4f46e5",
+            "surface-container-low": "#f2f3ff", "surface-container-lowest": "#ffffff", "background": "#faf8ff", "surface": "#faf8ff"
+          },
+          "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          "fontFamily": { "body-md": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "title-lg": ["Be Vietnam Pro"] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <header class="h-16 bg-surface/85 backdrop-blur-xl shadow-sm z-50 fixed top-0 left-0 right-0 flex items-center justify-between px-8">
+    <a href="public.html" class="flex items-center gap-2">
+      <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary font-bold">
+        <span class="material-symbols-outlined text-[24px]">school</span>
+      </div>
+      <span class="font-title-lg text-headline-sm text-on-surface">EduHub Public Portal</span>
+    </a>
+    <div class="flex items-center gap-3">
+      <a href="login.html" class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-lg hover:bg-surface-container-high">Đăng nhập</a>
+      <a href="login.html?mode=register" class="px-5 py-2 rounded-lg bg-primary text-on-primary font-label-lg shadow-sm hover:bg-primary-container">Tham gia ngay</a>
+    </div>
+  </header>
+
+  <main class="pt-20 px-8 max-w-[1280px] mx-auto pb-16">
+    <section class="text-center py-12 bg-gradient-to-r from-primary-container to-primary text-on-primary rounded-3xl p-8 shadow-xl mb-12">
+      <h1 class="font-headline-xl text-4xl font-extrabold mb-4">Cộng Đồng Học Thuật &amp; Chia Sẻ Tri Thức Mở</h1>
+      <p class="font-body-lg text-lg text-on-primary-container max-w-2xl mx-auto mb-6">
+        Tra cứu hàng ngàn bài thảo luận, tài liệu giảng dạy và bài giải chất lượng cao mà không cần tài khoản. Đăng ký để đặt câu hỏi và tương tác cùng sinh viên toàn quốc.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="login.html" class="px-6 py-3 bg-white text-primary rounded-xl font-bold shadow-lg hover:bg-surface-bright">Đăng ký tài khoản miễn phí</a>
+      </div>
+    </section>
+
+    <!-- Public Discussions Grid -->
+    <h2 class="font-headline-md text-2xl text-on-surface mb-6">Bài thảo luận nổi bật công khai (Public)</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm space-y-3">
+        <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm font-semibold">🌐 Public</span>
+        <h3 class="font-title-lg text-on-surface">Lỗi Concurrent State Mutation trong React Redux Toolkit Query?</h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-3">Chia sẻ bài toán xử lý Optimistic Updates trong Redux Toolkit khi ứng dụng bị race-condition mutation.</p>
+        <div class="flex items-center justify-between pt-3 border-t border-surface-container-low text-body-sm text-outline">
+          <span>👍 42 Upvotes • 14 Bình luận</span>
+          <a href="login.html" class="text-primary font-semibold hover:underline">Đăng nhập để bình luận →</a>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm space-y-3">
+        <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm font-semibold">🌐 Public</span>
+        <h3 class="font-title-lg text-on-surface">Slide Bài giảng Kinh Tế Lượng &amp; Phân Tích Chuỗi Thời Gian</h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-3">Bộ slide bài giảng chuẩn 64 trang kèm file dữ liệu thực hành Stata.</p>
+        <div class="flex items-center justify-between pt-3 border-t border-surface-container-low text-body-sm text-outline">
+          <span>📥 680 Lượt tải</span>
+          <a href="login.html" class="text-primary font-semibold hover:underline">Đăng nhập để tải về →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

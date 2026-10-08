@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>EduHub - Hàng chờ kiểm duyệt bài viết &amp; tài liệu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "on-secondary-fixed": "#001f26", "secondary-fixed-dim": "#4cd7f6", "tertiary": "#684000", "surface-bright": "#faf8ff",
+            "surface-dim": "#d2d9f4", "primary-fixed": "#e2dfff", "secondary": "#00687a", "surface-container": "#eaedff",
+            "outline-variant": "#c7c4d8", "on-secondary-container": "#006172", "primary": "#3525cd", "surface-variant": "#dae2fd",
+            "on-error": "#ffffff", "on-primary-fixed": "#0f0069", "surface-tint": "#4d44e3", "on-error-container": "#93000a",
+            "inverse-on-surface": "#eef0ff", "on-secondary": "#ffffff", "inverse-primary": "#c3c0ff", "outline": "#777587",
+            "on-tertiary": "#ffffff", "surface-container-highest": "#dae2fd", "on-tertiary-container": "#ffd4a4", "primary-fixed-dim": "#c3c0ff",
+            "inverse-surface": "#283044", "on-background": "#131b2e", "on-tertiary-fixed": "#2a1700", "surface-container-high": "#e2e7ff",
+            "tertiary-fixed": "#ffddb8", "error": "#ba1a1a", "tertiary-container": "#885500", "on-surface-variant": "#464555",
+            "on-primary": "#ffffff", "on-surface": "#131b2e", "surface-container-lowest": "#ffffff", "primary-container": "#4f46e5",
+            "surface-container-low": "#f2f3ff", "on-tertiary-fixed-variant": "#653e00", "on-secondary-fixed-variant": "#004e5c",
+            "secondary-container": "#57dffe", "secondary-fixed": "#acedff", "tertiary-fixed-dim": "#ffb95f", "background": "#faf8ff",
+            "surface": "#faf8ff", "on-primary-container": "#dad7ff", "on-primary-fixed-variant": "#3323cc", "error-container": "#ffdad6"
+          },
+          "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          "fontFamily": { "body-md": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "title-lg": ["Be Vietnam Pro"] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto">
+    <div class="h-16 px-space-lg flex items-center gap-space-sm flex-shrink-0">
+      <a href="index.html" class="flex items-center gap-space-sm">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">school</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-title-lg text-title-lg text-on-surface tracking-tight leading-none">EduHub</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Nền tảng học thuật số</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="flex-1 px-space-md py-space-sm space-y-space-lg">
+      <nav class="space-y-1">
+        <div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Khám phá</div>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="index.html">
+          <span class="material-symbols-outlined text-[20px]">forum</span>
+          <span>Trang chủ</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="documents.html">
+          <span class="material-symbols-outlined text-[20px]">auto_stories</span>
+          <span>Thư viện Tài liệu</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="friends.html">
+          <span class="material-symbols-outlined text-[20px]">groups</span>
+          <span>Nhóm học tập &amp; Bạn bè</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="saved.html">
+          <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          <span>Đã lưu</span>
+        </a>
+      </nav>
+
+      <nav class="space-y-1 bg-surface-container-low/70 p-space-xs rounded-xl moderator-only-zone">
+        <div class="px-space-sm py-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">verified_user</span>
+          <span>Moderator Zone</span>
+        </div>
+        <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" href="moderation.html">
+          <span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+          <span>Trung tâm Kiểm duyệt</span>
+        </a>
+        <a class="flex items-center justify-between px-space-sm py-2 rounded-lg bg-primary text-on-primary font-semibold shadow-sm transition-all" href="moderation-queue.html">
+          <span class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+            <span>Hàng chờ duyệt</span>
+          </span>
+          <span class="font-label-sm text-label-sm bg-error text-on-error px-2 py-0.5 rounded-full">14</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="pl-72">
+    <header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md">
+      <div class="flex-1 max-w-xl">
+        <form action="search.html" method="GET" class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+          <input class="w-full h-10 pl-10 pr-12 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" name="q" placeholder="Tìm kiếm hàng chờ duyệt..." type="text"/>
+        </form>
+      </div>
+      <div class="flex items-center gap-space-sm">
+        <button class="btn-notifications relative w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button" title="Thông báo">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="notification-badge hidden absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-error text-white font-bold text-[10px] rounded-full flex items-center justify-center ring-2 ring-surface shadow-sm"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="relative pt-16 min-h-screen bg-background w-full px-space-lg pb-space-xl">
+      <div class="max-w-[1360px] mx-auto w-full pt-4 pb-12">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h1 class="font-headline-lg text-headline-lg text-on-surface">Hàng Chờ Duyệt Bài Viết &amp; Tài Liệu</h1>
+            <p class="font-body-md text-on-surface-variant">Phê duyệt hoặc từ chối các bài đăng mới trước khi xuất hiện công khai trên hệ thống.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="btnApproveAllQueue" type="button" class="px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md hover:bg-primary-container shadow-sm transition-all cursor-pointer">Duyệt tất cả bài hợp lệ (AI Approved)</button>
+          </div>
+        </div>
+
+        <div id="moderationQueueContainer" class="space-y-4">
+          <!-- Pending Item 1 -->
+          <div class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm border-l-4 border-warning-color space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm font-bold">Mức ưu tiên: Cao</span>
+                <span class="font-body-sm text-outline">Bài thảo luận • Gửi 10 phút trước</span>
+              </div>
+              <span class="font-label-sm bg-surface-container px-3 py-1 rounded-full">Phạm vi: Public</span>
+            </div>
+            <h3 class="font-title-lg text-on-surface">Chia sẻ bộ đề thi Giữa kỳ Mạng Máy Tính có đáp án chi tiết năm 2025</h3>
+            <p class="font-body-md text-on-surface-variant">
+              Mình vừa tổng hợp lại 10 đề thi môn Lập trình mạng các khóa trước kèm lời giải chi tiết Socket TCP/UDP. Mọi người xem qua và góp ý giúp mình với nhé!
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-surface-container-low">
+              <div class="flex items-center gap-2">
+                <span class="font-body-sm text-outline">Tác giả: <strong class="text-on-surface">Lê Văn Nam (K21)</strong></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface font-label-md">Yêu cầu sửa</button>
+                <button class="px-4 py-2 bg-error text-on-error rounded-lg font-label-md">Từ chối (Reject)</button>
+                <button class="px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md">Phê duyệt (Approve)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pending Item 2 -->
+          <div class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm border-l-4 border-primary space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm font-bold">Mức ưu tiên: Bình thường</span>
+                <span class="font-body-sm text-outline">Tài liệu học tập • Gửi 35 phút trước</span>
+              </div>
+              <span class="font-label-sm bg-surface-container px-3 py-1 rounded-full">Phạm vi: Friends</span>
+            </div>
+            <h3 class="font-title-lg text-on-surface">Slide Bài giảng môn Hệ Quản Trị CSDL SQL Server (Bài 1 - 8)</h3>
+            <p class="font-body-md text-on-surface-variant">
+              Tài liệu Slide PDF do giảng viên tổng hợp dùng cho thực hành Lab CSDL.
+            </p>
+            <div class="flex items-center justify-between pt-3 border-t border-surface-container-low">
+              <div class="flex items-center gap-2">
+                <span class="font-body-sm text-outline">Tác giả: <strong class="text-on-surface">Phạm Thị Mai (Giảng viên)</strong></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button class="px-4 py-2 bg-error text-on-error rounded-lg font-label-md">Từ chối</button>
+                <button class="px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md">Phê duyệt (Approve)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/documents.js"></script>
+  <script src="assets/js/friends.js"></script>
+  <script src="assets/js/moderation.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>EduHub - Thư viện Tài liệu &amp; Giáo trình Học thuật</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      "darkMode": "class",
+      "theme": {
+        "extend": {
+          "colors": {
+            "on-secondary-fixed": "#001f26",
+            "secondary-fixed-dim": "#4cd7f6",
+            "tertiary": "#684000",
+            "surface-bright": "#faf8ff",
+            "surface-dim": "#d2d9f4",
+            "primary-fixed": "#e2dfff",
+            "secondary": "#00687a",
+            "surface-container": "#eaedff",
+            "outline-variant": "#c7c4d8",
+            "on-secondary-container": "#006172",
+            "primary": "#3525cd",
+            "surface-variant": "#dae2fd",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#0f0069",
+            "surface-tint": "#4d44e3",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#eef0ff",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#c3c0ff",
+            "outline": "#777587",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#dae2fd",
+            "on-tertiary-container": "#ffd4a4",
+            "primary-fixed-dim": "#c3c0ff",
+            "inverse-surface": "#283044",
+            "on-background": "#131b2e",
+            "on-tertiary-fixed": "#2a1700",
+            "surface-container-high": "#e2e7ff",
+            "tertiary-fixed": "#ffddb8",
+            "error": "#ba1a1a",
+            "tertiary-container": "#885500",
+            "on-surface-variant": "#464555",
+            "on-primary": "#ffffff",
+            "on-surface": "#131b2e",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#4f46e5",
+            "surface-container-low": "#f2f3ff",
+            "on-tertiary-fixed-variant": "#653e00",
+            "on-secondary-fixed-variant": "#004e5c",
+            "secondary-container": "#57dffe",
+            "secondary-fixed": "#acedff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "background": "#faf8ff",
+            "surface": "#faf8ff",
+            "on-primary-container": "#dad7ff",
+            "on-primary-fixed-variant": "#3323cc",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          "spacing": { "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "margin": "2rem", "gutter": "1.5rem" },
+          "fontFamily": {
+            "title-md": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "title-lg": ["Be Vietnam Pro"], "headline-sm": ["Be Vietnam Pro"],
+            "headline-xl": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "headline-lg-mobile": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"], "headline-lg": ["Be Vietnam Pro"], "label-lg": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "headline-xl-mobile": ["Be Vietnam Pro"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <!-- Left Sidebar Navigation -->
+  <aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto">
+    <div class="h-16 px-space-lg flex items-center gap-space-sm flex-shrink-0">
+      <a href="index.html" class="flex items-center gap-space-sm">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+          <span class="material-symbols-outlined text-[24px]">school</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-title-lg text-title-lg text-on-surface tracking-tight leading-none">EduHub</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Nền tảng học thuật số</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="flex-1 px-space-md py-space-sm space-y-space-lg">
+      <nav class="space-y-1">
+        <div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Khám phá</div>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="index.html">
+          <span class="material-symbols-outlined text-[20px]">forum</span>
+          <span>Trang chủ</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg bg-primary text-on-primary font-semibold shadow-sm transition-all" href="documents.html">
+          <span class="material-symbols-outlined text-[20px]">auto_stories</span>
+          <span>Thư viện Tài liệu</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="friends.html">
+          <span class="material-symbols-outlined text-[20px]">groups</span>
+          <span>Nhóm học tập &amp; Bạn bè</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="saved.html">
+          <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          <span>Đã lưu</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="my-posts.html">
+          <span class="material-symbols-outlined text-[20px]">post_add</span>
+          <span>Bài viết của tôi</span>
+        </a>
+      </nav>
+
+      <nav class="space-y-1 bg-surface-container-low/70 p-space-xs rounded-xl moderator-only-zone">
+        <div class="px-space-sm py-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">verified_user</span>
+          <span>Moderator Zone</span>
+        </div>
+        <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" href="moderation.html">
+          <span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+          <span>Trung tâm Kiểm duyệt</span>
+        </a>
+        <a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-sm text-body-sm" href="moderation-queue.html">
+          <span class="flex items-center gap-space-sm">
+            <span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+            <span>Hàng chờ duyệt</span>
+          </span>
+          <span class="font-label-sm text-label-sm bg-error text-on-error px-2 py-0.5 rounded-full">14</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="p-space-md bg-surface-container-low flex-shrink-0 space-y-1">
+      <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" href="profile.html">
+        <span class="material-symbols-outlined text-[20px]">account_circle</span>
+        <span>Hồ sơ cá nhân</span>
+      </a>
+      <a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all font-body-md text-body-md" href="public.html">
+        <span class="material-symbols-outlined text-[20px]">logout</span>
+        <span>Đăng xuất</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <div class="pl-72">
+    <header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md">
+      <div class="flex-1 max-w-xl">
+        <form action="search.html" method="GET" class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+          <input class="w-full h-10 pl-10 pr-12 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" name="q" placeholder="Tìm tài liệu, giáo trình, mã môn..." type="text"/>
+        </form>
+      </div>
+      <div class="flex items-center gap-space-sm">
+        <button onclick="document.getElementById('uploadModal').classList.remove('hidden')" class="h-10 px-space-md rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center gap-2 hover:bg-primary transition-colors shadow-sm" type="button">
+          <span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+          <span>Đăng tài liệu mới</span>
+        </button>
+        <button class="btn-notifications relative w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" type="button" title="Thông báo">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="notification-badge hidden absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-error text-white font-bold text-[10px] rounded-full flex items-center justify-center ring-2 ring-surface shadow-sm"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="relative pt-16 min-h-screen bg-background w-full px-space-lg pb-space-xl">
+      <div class="flex flex-col w-full">
+        <!-- Banner Header -->
+        <section class="relative w-full rounded-2xl bg-gradient-to-r from-primary to-primary-container text-on-primary p-space-lg shadow-xl overflow-hidden mb-space-lg mt-4">
+          <div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+            <div class="max-w-2xl">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-on-primary font-label-md text-label-md mb-3">
+                <span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+                <span>Kho Học Liệu Số • Phân Tác Ngang Hàng</span>
+              </div>
+              <h1 class="font-headline-xl text-headline-xl text-on-primary tracking-tight mb-2">Thư Viện Tài Liệu Học Thuật</h1>
+              <p class="font-body-lg text-body-lg text-on-primary-container max-w-xl font-light">
+                Khám phá 12,480+ tài liệu, đề thi, slide bài giảng &amp; source code được chia sẻ bởi sinh viên &amp; giảng viên.
+              </p>
+            </div>
+            <button onclick="document.getElementById('uploadModal').classList.remove('hidden')" class="h-12 px-space-lg rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-[22px]">cloud_upload</span>
+              <span>Đóng góp tài liệu mới</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Search & Filter Controls -->
+        <section class="w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-sm mb-space-lg flex flex-col gap-space-md">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Chuyên ngành</label>
+              <select class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none">
+                <option value="all">Tất cả chuyên ngành</option>
+                <option value="cntt" selected>Công nghệ thông tin</option>
+                <option value="math">Toán ứng dụng</option>
+                <option value="econ">Kinh tế &amp; Tài chính</option>
+                <option value="eng">Ngoại ngữ</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Loại tài liệu</label>
+              <select class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none">
+                <option value="all">Tất cả định dạng</option>
+                <option value="pdf">PDF Đề thi &amp; Đáp án</option>
+                <option value="slide">Slide bài giảng</option>
+                <option value="code">Source code &amp; Lab</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Phạm vi chia sẻ</label>
+              <select class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none">
+                <option value="all">Tất cả phạm vi</option>
+                <option value="public">Công khai (Public)</option>
+                <option value="friends">Bạn bè (Friends)</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Sắp xếp theo</label>
+              <select class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none">
+                <option value="downloads">Lượt tải nhiều nhất</option>
+                <option value="rating">Đánh giá cao nhất (4.8+)</option>
+                <option value="latest">Mới cập nhật</option>
+                <option value="saves">Được lưu nhiều nhất</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Document Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg mb-space-xl">
+          <!-- Doc Card 1 -->
+          <article class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-primary font-semibold">CNTT • CS102</span>
+                <span class="px-2 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed font-label-sm text-label-sm uppercase">Public</span>
+              </div>
+              <a href="document-detail.html">
+                <h3 class="font-title-lg text-title-lg text-on-surface leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  Tuyển tập 50 Đề thi Cấu trúc Dữ liệu &amp; Giải thuật 2024 có đáp án
+                </h3>
+              </a>
+              <div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm mb-4">
+                <span class="flex items-center gap-1 text-error"><span class="material-symbols-outlined text-[16px]">picture_as_pdf</span> 14.8 MB</span>
+                <span>• 128 Trang</span>
+                <span class="flex items-center gap-0.5 text-tertiary"><span class="material-symbols-outlined text-[14px]">star</span> 4.9</span>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low mb-5">
+                <div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs">TM</div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-body-sm text-on-surface font-semibold truncate">Trần Minh Quân</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant truncate">ĐH Bách Khoa • 2 ngày trước</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between pt-3 text-on-surface-variant font-label-sm text-label-sm mb-4 border-t border-surface-container-low">
+                <span>📥 1.2k lượt tải</span>
+                <span>🔖 342 lượt lưu</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="document-detail.html" class="h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">visibility</span>
+                  <span>Xem chi tiết</span>
+                </a>
+                <button class="h-10 px-3 rounded-lg bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">file_download</span>
+                  <span>Tải về</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doc Card 2 -->
+          <article class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary font-semibold">Kinh tế • ECO301</span>
+                <span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm uppercase">Friends</span>
+              </div>
+              <a href="document-detail.html">
+                <h3 class="font-title-lg text-title-lg text-on-surface leading-snug mb-2 group-hover:text-secondary transition-colors line-clamp-2">
+                  Bộ Slide Bài giảng Kinh Tế Lượng &amp; Phân Tích Chuỗi Thời Gian
+                </h3>
+              </a>
+              <div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm mb-4">
+                <span class="flex items-center gap-1 text-tertiary"><span class="material-symbols-outlined text-[16px]">co_present</span> 26.4 MB</span>
+                <span>• 64 Slides</span>
+                <span class="flex items-center gap-0.5 text-tertiary"><span class="material-symbols-outlined text-[14px]">star</span> 4.8</span>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low mb-5">
+                <div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">YC</div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-body-sm text-on-surface font-semibold truncate">ThS. Hoàng Yến Chi</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant truncate">ĐH Kinh tế Quốc dân • Tuần trước</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between pt-3 text-on-surface-variant font-label-sm text-label-sm mb-4 border-t border-surface-container-low">
+                <span>📥 680 lượt tải</span>
+                <span>🔖 124 lượt lưu</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="document-detail.html" class="h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">visibility</span>
+                  <span>Xem chi tiết</span>
+                </a>
+                <button class="h-10 px-3 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">file_download</span>
+                  <span>Tải về</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doc Card 3 -->
+          <article class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-primary-container"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-primary font-semibold">CNTT • PROJ490</span>
+                <span class="px-2 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed font-label-sm text-label-sm uppercase">Public</span>
+              </div>
+              <a href="document-detail.html">
+                <h3 class="font-title-lg text-title-lg text-on-surface leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  Full Source Code &amp; Báo cáo Dự án Web E-Commerce AI Recommender
+                </h3>
+              </a>
+              <div class="flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm mb-4">
+                <span class="flex items-center gap-1 text-primary"><span class="material-symbols-outlined text-[16px]">code</span> 5.2 MB</span>
+                <span>• ZIP Repo</span>
+                <span class="flex items-center gap-0.5 text-tertiary"><span class="material-symbols-outlined text-[14px]">star</span> 5.0</span>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low mb-5">
+                <div class="w-9 h-9 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-bold text-xs">LK</div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-title-md text-body-sm text-on-surface font-semibold truncate">Lê Bá Khôi</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant truncate">ĐH KHTN • 3 ngày trước</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between pt-3 text-on-surface-variant font-label-sm text-label-sm mb-4 border-t border-surface-container-low">
+                <span>📥 2.8k lượt tải</span>
+                <span>🔖 612 lượt lưu</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="document-detail.html" class="h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">visibility</span>
+                  <span>Xem chi tiết</span>
+                </a>
+                <button class="h-10 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">file_download</span>
+                  <span>Tải về</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Upload Modal -->
+  <div id="uploadModal" class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden">
+    <div class="w-full max-w-xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden p-space-lg space-y-space-md m-4">
+      <div class="flex items-center justify-between pb-2 border-b border-surface-container-low">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface">Chia sẻ tài liệu học tập mới</h2>
+        <button onclick="document.getElementById('uploadModal').classList.add('hidden')" class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div class="space-y-4 py-2">
+        <div>
+          <label class="font-label-lg text-label-lg text-on-surface">Tiêu đề tài liệu / Đề thi</label>
+          <input type="text" class="w-full h-11 px-3 mt-1 bg-surface-container-low rounded-lg text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="VD: Slide Bài giảng Lập trình mạng K21..."/>
+        </div>
+        <div>
+          <label class="font-label-lg text-label-lg text-on-surface">Mô tả tóm tắt nội dung</label>
+          <textarea rows="3" class="w-full p-3 mt-1 bg-surface-container-low rounded-lg text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Tóm tắt tài liệu, các chủ đề chính..."></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="font-label-lg text-label-lg text-on-surface">Chuyên ngành / Môn</label>
+            <input type="text" class="w-full h-11 px-3 mt-1 bg-surface-container-low rounded-lg text-on-surface focus:outline-none" placeholder="VD: Lập trình mạng"/>
+          </div>
+          <div>
+            <label class="font-label-lg text-label-lg text-on-surface">Phạm vi chia sẻ</label>
+            <select class="w-full h-11 px-3 mt-1 bg-surface-container-low rounded-lg text-on-surface focus:outline-none">
+              <option value="Public">🌐 Public (Công khai)</option>
+              <option value="Friends">👥 Friends (Bạn bè)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="font-label-lg text-label-lg text-on-surface">Đường dẫn file (URL PDF/Slide/Drive)</label>
+          <input type="url" class="w-full h-11 px-3 mt-1 bg-surface-container-low rounded-lg text-on-surface focus:outline-none" placeholder="https://example.com/file.pdf"/>
+        </div>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-2 border-t border-surface-container-low">
+        <button onclick="document.getElementById('uploadModal').classList.add('hidden')" class="px-4 py-2 rounded-lg bg-surface-container-low text-on-surface font-label-lg hover:bg-surface-container-high">Hủy bỏ</button>
+        <button onclick="document.getElementById('uploadModal').classList.add('hidden')" class="px-5 py-2 rounded-lg bg-primary text-on-primary font-label-lg hover:bg-primary-container shadow-sm">Đăng tài liệu</button>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/documents.js"></script>
+  <script src="assets/js/friends.js"></script>
+  <script src="assets/js/moderation.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
